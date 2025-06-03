@@ -1,0 +1,42 @@
+@import "../../assets/styles/variables";
+
+.general {
+    padding: 24px 0;
+
+    .container {
+        max-width: 1240px;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .generalHeading {
+            font-size: 48px;
+            color: $lightgreen-text-color;
+        }
+        
+        .generalBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 6px;
+            
+            .generalText {
+                font-size: 24px;
+                color: $lightgreen-text-color;
+            }
+    
+            .generalLink {
+                text-decoration: none;
+                font-size: 21px;
+                // color: $action-light-text-color;
+                border-bottom: 2px solid transparent;
+    
+                // &:hover {
+                //     border-bottom-color: $action-light-text-color;
+                // }
+            }
+        }
+    }
+}

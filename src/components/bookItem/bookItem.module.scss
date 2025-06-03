@@ -1,0 +1,80 @@
+@import "../../assets/styles/variables";
+
+.bookBlock {
+    width: 270px;
+    // height: 540px;
+    border: 2px solid $gray-text-color;
+    border-radius: 6px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: $white-text-color;
+
+    .bookTitle {
+        font-size: 21px;
+        color: $green-text-color;
+        font-family: "Lora", sans-serif;
+        font-weight: 500;
+        margin-bottom: 6px;
+        line-height: 1;
+        height: 66px;
+    }
+    
+    .bookAuthor {
+        font-size: 15px;
+        color: $green-text-color;
+        font-family: "Inter", serif;
+        font-weight: 300;
+        font-style: italic;
+        padding-bottom: 9px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid $gray-text-color;
+    }
+    
+    .bookImage {
+        width: 210px;
+        height: 270px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 auto 12px auto;
+        display: block;
+    }
+
+    .bookDesc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 24px;
+        color: $green-text-color;
+        padding-top: 9px;
+        border-top: 1px solid $gray-text-color;
+
+        .bookPrice {
+            font-family: "Inter", serif;
+            font-weight: 400;
+        }
+
+        .bookRating {
+            display: flex;
+            align-items: center;
+            font-family: "Lora", serif;
+            font-style: italic;
+            font-weight: 300;
+            gap: 6px;
+
+            svg {
+                fill: $green-text-color;
+                height: 21px;
+            }
+        }
+    }
+
+    .bookTheme {
+        font-size: 15px;
+        color: $green-text-color;
+        font-family: "Inter", serif;
+        font-weight: 300;
+        font-style: italic;
+        margin-top: 12px;
+    }
+}

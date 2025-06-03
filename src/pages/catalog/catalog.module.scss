@@ -1,0 +1,40 @@
+@import "../../assets/styles/variables";
+
+.catalog {
+    padding: 24px 0;
+
+    .container {
+        max-width: 1240px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        .catalogHeading {
+            font-size: 36px;
+            color: $lightgreen-text-color;
+        }
+
+        .catalogGrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 21px;
+            justify-content: center;
+        }
+
+        .catalogLink {
+            margin-top: 39px;
+            text-align: center;
+            margin-bottom: 60px;
+
+            a {
+                text-decoration: none;
+                font-size: 21px;
+                // color: $action-light-text-color;
+                border-bottom: 2px solid transparent;
+
+                // &:hover {
+                //     border-bottom-color: $action-light-text-color;
+                // }
+            }
+        }
+    }
+}
