@@ -2,20 +2,24 @@ import { useContext } from "react"
 import styles from "./bookItem.module.scss"
 import { Link } from "react-router-dom"
 import { ThemeContext } from "../../App"
+import { CatalogContext } from "../../App"
 
 export default function BookItem(props) {
     const { bookInfo } = props
     const { isDarkTheme, setIsDarkTheme } = useContext(ThemeContext)
+    const { booksArray, setBooksArray } = useContext(CatalogContext)
+
+    // const thisBook = booksArray.find(book => book.id === bookInfo.id)
 
     return (
-        <div className={styles.bookBlock}>
+        <div className={styles.bookBlock} style={isDarkTheme ? { "borderColor": "#79a07c" } : { "borderColor": "#2c2c2c" }}>
             <div className={styles.bookTitle}>{bookInfo.title}</div>
             <div className={styles.bookAuthor}>{bookInfo.author}</div>
-            <Link 
-                className={styles.bookImage} 
+            <Link
+                className={styles.bookImage}
                 style={{ "backgroundImage": `url('src/assets/images/books/${bookInfo.id}.png')` }}
                 to={`/book/${bookInfo.id}`}
-            ></Link>
+                ></Link>
             <div className={styles.bookDesc}>
                 <div className={styles.bookPrice}>{bookInfo.price} руб.</div>
                 <div className={styles.bookRating}>
@@ -26,6 +30,14 @@ export default function BookItem(props) {
                 </div>
             </div>
             <div className={styles.bookTheme}>{bookInfo.theme}</div>
+            <button
+                className={styles.bookButton + " " + styles.bookButtonFav}
+                style={bookInfo.favourite ? { "backgroundColor": "#ffb700" } : { "backgroundColor": "#bebebe" }}
+                onClick={() => setBooksArray(oldArray => oldArray.map(item => item.id === bookInfo.id ? {...item, favourite: !item.favourite} : {...item}))}
+            >
+                {bookInfo.favourite ? "В избранном" : "Добавить в избранное"}
+            </button>
+            <button className={styles.bookButton + " " + styles.bookButtonMore}>Подробнее</button>
         </div>
     )
 }

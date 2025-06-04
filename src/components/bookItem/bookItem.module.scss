@@ -3,7 +3,7 @@
 .bookBlock {
     width: 270px;
     // height: 540px;
-    border: 2px solid $gray-text-color;
+    border: 3px solid;
     border-radius: 6px;
     padding: 15px;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
         line-height: 1;
         height: 66px;
     }
-    
+
     .bookAuthor {
         font-size: 15px;
         color: $green-text-color;
@@ -29,7 +29,7 @@
         margin-bottom: 12px;
         border-bottom: 1px solid $gray-text-color;
     }
-    
+
     .bookImage {
         width: 210px;
         height: 270px;
@@ -76,5 +76,21 @@
         font-weight: 300;
         font-style: italic;
         margin-top: 12px;
+    }
+
+    .bookButton {
+        width: 100%;
+        padding: 9px;
+        font-family: "Inter", serif;
+        font-weight: 400;
+        margin-top: 12px;
+        cursor: pointer;
+        border-radius: 6px;
+        border: none;
+        
+        &.bookButtonMore {
+            background-color: $action-dark-text-color;
+            color: $white-text-color;
+        }
     }
 }

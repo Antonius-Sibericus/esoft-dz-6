@@ -8,7 +8,8 @@ const books = [
         pages: 864,
         rating: "4.7",
         price: 1174,
-        theme: "Волшебные миры"
+        theme: "Волшебные миры",
+        favourite: false
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ const books = [
         pages: 544,
         rating: "4.6",
         price: 892,
-        theme: "Волшебные миры"
+        theme: "Волшебные миры",
+        favourite: false
     },
     {
         id: 3,
@@ -30,7 +32,8 @@ const books = [
         pages: 640,
         rating: "4.6",
         price: 939,
-        theme: "Волшебные миры"
+        theme: "Волшебные миры",
+        favourite: false
     },
     {
         id: 4,
@@ -41,7 +44,8 @@ const books = [
         pages: 512,
         rating: "4.2",
         price: 920,
-        theme: "Волшебные миры"
+        theme: "Волшебные миры",
+        favourite: false
     },
     {
         id: 5,
@@ -52,7 +56,8 @@ const books = [
         pages: 448,
         rating: "4.6",
         price: 845,
-        theme: "Волшебные миры"
+        theme: "Волшебные миры",
+        favourite: false
     },
     {
         id: 6,
@@ -63,7 +68,8 @@ const books = [
         pages: 32,
         rating: "4.0",
         price: 544,
-        theme: "Комиксы"
+        theme: "Комиксы",
+        favourite: false
     },
     {
         id: 7,
@@ -74,7 +80,8 @@ const books = [
         pages: 336,
         rating: "4.0",
         price: 1127,
-        theme: "Комиксы"
+        theme: "Комиксы",
+        favourite: false
     },
     {
         id: 8,
@@ -85,7 +92,8 @@ const books = [
         pages: 380,
         rating: "4.7",
         price: 845,
-        theme: "Комиксы"
+        theme: "Комиксы",
+        favourite: false
     },
     {
         id: 9,
@@ -96,7 +104,8 @@ const books = [
         pages: 72,
         rating: "4.3",
         price: 1315,
-        theme: "Комиксы"
+        theme: "Комиксы",
+        favourite: false
     },
     {
         id: 10,
@@ -107,7 +116,8 @@ const books = [
         pages: 544,
         rating: "5.0",
         price: 1691,
-        theme: "Философия"
+        theme: "Философия",
+        favourite: false
     },
     {
         id: 11,
@@ -118,7 +128,8 @@ const books = [
         pages: 352,
         rating: "4.4",
         price: 299,
-        theme: "Философия"
+        theme: "Философия",
+        favourite: false
     },
     {
         id: 12,
@@ -129,7 +140,8 @@ const books = [
         pages: 224,
         rating: "4.0",
         price: 328,
-        theme: "Философия"
+        theme: "Философия",
+        favourite: false
     },
     {
         id: 13,
@@ -140,7 +152,8 @@ const books = [
         pages: 472,
         rating: "5.0",
         price: 999,
-        theme: "Мемуары"
+        theme: "Мемуары",
+        favourite: false
     },
     {
         id: 14,
@@ -151,7 +164,8 @@ const books = [
         pages: 640,
         rating: "4.2",
         price: 1503,
-        theme: "Мемуары"
+        theme: "Мемуары",
+        favourite: false
     },
     {
         id: 15,
@@ -162,7 +176,8 @@ const books = [
         pages: 288,
         rating: "4.9",
         price: 449,
-        theme: "Мемуары"
+        theme: "Мемуары",
+        favourite: false
     },
 ]
 
