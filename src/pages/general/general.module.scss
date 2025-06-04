@@ -7,8 +7,6 @@
         max-width: 1240px;
         padding: 0 20px;
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
 
         .generalHeading {
             font-size: 48px;
@@ -30,12 +28,7 @@
             .generalLink {
                 text-decoration: none;
                 font-size: 21px;
-                // color: $action-light-text-color;
                 border-bottom: 2px solid transparent;
-    
-                // &:hover {
-                //     border-bottom-color: $action-light-text-color;
-                // }
             }
         }
     }

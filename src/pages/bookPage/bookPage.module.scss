@@ -1,0 +1,108 @@
+@import "../../assets/styles/variables";
+
+.bookPage {
+    padding: 24px 0;
+
+    .container {
+        max-width: 1240px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        .bookPageHeading {
+            font-size: 36px;
+            margin: 27px 0;
+        }
+
+        .bookPageAuthor {
+            font-size: 27px;
+            margin-bottom: 21px;
+        }
+
+        .bookPageInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 30px;
+
+            .bookPageImage {
+                width: 540px;
+                height: 540px;
+                background-position: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .bookPageDescription {
+                width: 600px;
+
+                .bookPageChar {
+                    font-size: 30px;
+                    color: $lightgreen-text-color;
+                    font-family: "Lora", sans-serif;
+                    font-style: italic;
+                    font-weight: 400;
+                    margin-bottom: 3px;
+                }
+
+                .bookPageCat {
+                    font-size: 18px;
+                    // color: $gray-text-color;
+                    font-family: "Inter", serif;
+                    font-weight: 300;
+                    font-style: italic;
+                    margin-bottom: 15px;
+                }
+
+                .bookPageButton {
+                    width: 270px;
+                    padding: 15px;
+                    font-family: "Inter", serif;
+                    font-weight: 400;
+                    font-size: 21px;
+                    margin-top: 12px;
+                    cursor: pointer;
+                    border-radius: 6px;
+                    border: none;
+                }
+
+                .bookPageRead {
+                    width: 270px;
+                    padding: 13px;
+                    font-family: "Inter", serif;
+                    font-weight: 400;
+                    font-size: 21px;
+                    margin-top: 12px;
+                    cursor: pointer;
+                    border-radius: 6px;
+                    border: none;
+                    margin-left: 24px;
+                    border: 2px solid $action-dark-text-color;
+                    // color: $white-text-color;
+                }
+
+                .bookPageLink {
+                    display: block;
+                    margin-top: 30px;
+                    text-decoration: none;
+                    font-size: 21px;
+                    border-bottom: 2px solid transparent;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .bookPageReading {
+            margin-top: 60px;
+
+            .bookPageReadingTitle {
+                font-size: 27px;
+                margin-bottom: 21px;
+                text-align: center;
+            }
+
+            .bookPageReadingText {
+                font-size: 18px;
+            }
+        }
+    }
+}

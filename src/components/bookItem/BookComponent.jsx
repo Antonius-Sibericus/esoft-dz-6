@@ -1,10 +1,10 @@
-import { useContext } from "react"
+import { memo, useContext } from "react"
 import styles from "./bookItem.module.scss"
 import { Link } from "react-router-dom"
 import { ThemeContext } from "../../App"
 import { CatalogContext } from "../../App"
 
-export default function BookItem(props) {
+const BookItem = memo(function BookItem(props) {
     const { bookInfo } = props
     const { isDarkTheme, setIsDarkTheme } = useContext(ThemeContext)
     const { booksArray, setBooksArray } = useContext(CatalogContext)
@@ -19,7 +19,7 @@ export default function BookItem(props) {
                 className={styles.bookImage}
                 style={{ "backgroundImage": `url('src/assets/images/books/${bookInfo.id}.png')` }}
                 to={`/book/${bookInfo.id}`}
-                ></Link>
+            ></Link>
             <div className={styles.bookDesc}>
                 <div className={styles.bookPrice}>{bookInfo.price} руб.</div>
                 <div className={styles.bookRating}>
@@ -33,11 +33,17 @@ export default function BookItem(props) {
             <button
                 className={styles.bookButton + " " + styles.bookButtonFav}
                 style={bookInfo.favourite ? { "backgroundColor": "#ffb700" } : { "backgroundColor": "#bebebe" }}
-                onClick={() => setBooksArray(oldArray => oldArray.map(item => item.id === bookInfo.id ? {...item, favourite: !item.favourite} : {...item}))}
+                onClick={() => setBooksArray(oldArray => oldArray.map(item => item.id === bookInfo.id ? { ...item, favourite: !item.favourite } : { ...item }))}
             >
                 {bookInfo.favourite ? "В избранном" : "Добавить в избранное"}
             </button>
-            <button className={styles.bookButton + " " + styles.bookButtonMore}>Подробнее</button>
+            <Link to={`/book/${bookInfo.id}`}>
+                <button className={styles.bookButton + " " + styles.bookButtonMore}>
+                    Подробнее
+                </button>
+            </Link>
         </div>
     )
-}
+})
+
+export default BookItem
